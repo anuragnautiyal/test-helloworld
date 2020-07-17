@@ -43,8 +43,8 @@ agent any
 		
 						// start of running steps inside one stage. Anurag added it on the remote repo
 						steps {
-							bat 'cd target'
-							bat 'java -jar HelloWorlldService-0.0.1-SNAPSHOT.jar'
+							//bat 'cd target'
+							bat 'java -jar target\HelloWorlldService-0.0.1-SNAPSHOT.jar'
 						}
 					}		
 			}	
