@@ -1,16 +1,53 @@
 // start of pipeline
 pipeline {
+
 // where pipeline job will run
 agent any
+
+
 // start of stages : build, test, deploy ...
-stages {
-// start of stage : build
-stage('build') {
-// start of running steps inside one stage. Anurag added it on the remote repo
-steps {
-// invoke command to build with maven
-bat 'mvn clean install'
-}
-}
-}
+	
+	stages {
+	
+		// start of stage : build
+		
+		stage('build') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							// invoke command to build with maven
+							bat 'mvn clean install'
+						}
+					}
+			
+		stage('Test') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							echo " Test STARTED"
+							echo " Test IN PRGRESS"
+							echo " Test ENDED"
+						}
+					}
+			
+		stage('Veracode') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							echo " Veracode STARTED"
+							echo " Veracode IN PRGRESS"
+							echo " Veracode ENDED"
+						}
+					}
+		stage('Deploy') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							bat 'cd target'
+							bat 'java -jar HelloWorlldService-0.0.1-SNAPSHOT.jar'
+						}
+					}		
+			}	
+			
+			
 }
