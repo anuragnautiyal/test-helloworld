@@ -6,7 +6,7 @@ agent any
 stages {
 // start of stage : build
 stage('build') {
-// start of running steps inside one stage
+// start of running steps inside one stage. Anurag added it on the remote repo
 steps {
 // invoke command to build with maven
 bat 'mvn clean install'
