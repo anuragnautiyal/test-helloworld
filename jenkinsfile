@@ -43,10 +43,11 @@ agent any
 		
 						// start of running steps inside one stage. Anurag added it on the remote repo
 						steps {
-							sh "cd target"
+							bat 'cmd.exe'
+							bat 'cd target'
 							echo " HERE IS THE WORKING DIRECTORY"
 							//sh pwd
-							sh "java -jar target\HelloWorlldService-0.0.1-SNAPSHOT.jar"
+							bat 'java -jar target\HelloWorlldService-0.0.1-SNAPSHOT.jar'
 						}
 					}		
 			}	
