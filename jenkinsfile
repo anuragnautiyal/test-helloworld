@@ -44,11 +44,11 @@ agent any
 						// start of running steps inside one stage. Anurag added it on the remote repo
 						steps {
 							//bat 'cmd.exe'
-							bat 'cd C:\Program Files (x86)\Jenkins\workspace\HelloWorldService_pipeline\target'
+							bat 'cd C:/Program Files (x86)/Jenkins/workspace/HelloWorldService_pipeline/target'
 							bat 'cd'
 							echo " HERE IS THE WORKING DIRECTORY"
 							bat 'cd'
-							bat 'java -jar target/HelloWorlldService-0.0.1-SNAPSHOT.jar'
+							bat 'java -jar HelloWorlldService-0.0.1-SNAPSHOT.jar'
 						}
 					}		
 			}	
