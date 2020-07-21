@@ -52,11 +52,19 @@ agent any
 						}
 						
 					}	
-		dir('*/target') {
+					stage('PostDeploy') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							dir('*/target') {
 											echo " HERE IS THE WORKING DIRECTORY"
 											bat 'cd'
 											bat 'java -jar HelloWorlldService-0.0.1-SNAPSHOT.jar'
-						}					
+						}
+						}
+						
+					}
+							
 			}	
 			
 			
