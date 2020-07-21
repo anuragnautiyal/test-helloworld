@@ -48,8 +48,13 @@ agent any
 							//bat 'cd'
 							echo " HERE IS THE WORKING DIRECTORY"
 							bat 'cd'
-							bat 'java -jar target/HelloWorlldService-0.0.1-SNAPSHOT.jar'
+							//bat 'java -jar target/HelloWorlldService-0.0.1-SNAPSHOT.jar'
 						}
+						dir('*/target') {
+											echo " HERE IS THE WORKING DIRECTORY"
+											bat 'cd'
+											bat 'java -jar HelloWorlldService-0.0.1-SNAPSHOT.jar'
+										}
 					}		
 			}	
 			
