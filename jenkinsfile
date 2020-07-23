@@ -27,6 +27,7 @@ agent any
 							echo " Test STARTED"
 							echo " Test IN PRGRESS"
 							echo " Test ENDED"
+							echo " Branch name ${BRANCH_NAME} "
 						}
 					}
 			stage('Extra Step in Form') {
