@@ -29,6 +29,15 @@ agent any
 							echo " Test ENDED"
 						}
 					}
+			stage('Extra Step in Form') {
+		
+						// start of running steps inside one stage. Anurag added it on the remote repo
+						steps {
+							echo " Extra step in fork STARTED"
+							echo " Extra step in fork IN PROGRESS"
+							echo " Extra step in fork ENDED"
+						}
+					}			
 			
 		stage('Veracode') {
 		
